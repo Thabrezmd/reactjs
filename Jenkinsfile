@@ -26,6 +26,10 @@ pipeline {
                                 sh './jenkins/scripts/kill.sh'
                             }
                         }
-
+         stage('Stage-9 : Deployment - Deploy a Artifact devops-3.0.0-SNAPSHOT.war file to Tomcat Server') { 
+            steps {
+                sh 'curl -u thabrez:Tabrez@99 -T target/**.war "http://43.205.94.253:8080/manager/text/deploy?path=/reactjs&update=true"'
+            }
+        }                
     }
 }
