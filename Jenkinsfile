@@ -17,5 +17,5 @@ pipeline {
                 sh 'curl -u thabrez:Tabrez@99 -T target/**.war "http://43.205.94.253:8080/manager/text/deploy?path=/reactjs&update=true"'
             }
         } 
-  }
+}
 }
