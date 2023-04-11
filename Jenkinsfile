@@ -8,12 +8,11 @@ pipeline {
         sh 'npm run build'
       }
     }
-    
-    stage('Deploy') {
+        stage('Deploy') {
       steps {
         sh '''
-          curl -u thabrez:Tabrez "http://65.2.128.121:8080/manager/text/undeploy?path=/reactjs"
-          curl -u thabrez:Tabrez@99 -T build/*.war "http://65.2.128.121:8080/manager/text/deploy?path=/reactjs&update=true"
+          curl -u thabrez:Tabrez "http://3.110.87.198:8080/manager/text/undeploy?path=/reactjs"
+          curl -u thabrez:Tabrez@99 -T build/*.war "http://3.110.87.198:8080/manager/text/deploy?path=/reactjs&update=true"
         '''
       }
     }
